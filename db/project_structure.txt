@@ -1,0 +1,129 @@
+
+
+	% payment_method
+		* @ payment_method pk auto_increment
+		* payment_method_name
+		* card_number (if it's a debit/credit card)
+		* 
+		* 
+
+	% order
+		* @ order id pk auto_increment
+		* ~ products []
+		* order_number ej: Order # 111-8712374-8412731
+		* order_placement
+		* shipping_date
+		* delivered_date
+		* ship_to (final location for the shippment)
+		* total_price (the total sum of the products prices)
+		* 
+		
+	% tracking
+		* @ tracking_id pk auto_increment
+		* delivery_name
+		* tracking_number
+		* 
+		* 
+		* 
+	
+	% user
+		* @ user id pk auto_increment
+		* ~ user_type id fk
+		* ~ subscription_id fk
+		* ~ list [] fk
+		* name
+		* lastname
+		* username
+		* password
+		* age
+		* ~ address []
+		* 
+		
+	% address
+		* @ address_id pk auto_increment
+		* address_name
+		* zip code
+		* country_name
+		* city_name
+		* 
+	
+	% list
+		* @ list_id pk auto_increment
+		* name
+		* ~ product_id fk []
+	
+	% membership
+		* @ membership_id pk auto_increment
+		* name
+		* price
+		* 
+		* 
+		* 
+	
+	% category
+		* @ category_id pk auto_increment
+		* name
+		* 
+		* 
+	
+	% user_type
+		* @ user_type_id pk auto_increment
+		* 
+		* 
+		* 
+	
+	% discount
+		* @ discount_id pk auto_increment
+		* has_discount [boolean]
+		* discount_amount
+	
+	% seller
+		* @ sellet_id pk auto_increment
+		* seller_name
+		* ~ available_products fk []
+		* 
+	
+	% product
+		* @ product_id pk auto_increment
+		* name
+		* price
+		* description
+		* images
+		* ~ seller fk
+		* 
+	
+	% seller
+		* @ seller_id pk auto_increment
+		* name
+		* ~ product fk []
+	
+	% keyword
+		* @ keyword_id pk auto_increment
+		* name
+	
+	% star
+		* star_id pk auto_increment
+		* stars_quantity
+	
+	% image
+		* @ image_id pk auto_increment
+		* 
+		* 
+		* 
+		* 
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
